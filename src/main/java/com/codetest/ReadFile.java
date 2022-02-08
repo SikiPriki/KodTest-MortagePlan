@@ -9,12 +9,6 @@ import java.util.regex.Pattern;
 
 
 public class ReadFile {
-    public String name="";
-    public float  y;
-    public float  u;
-    float b;
-    //https://www.baeldung.com/java-file-to-arraylist
-    public ArrayList<String> stringtoArray = new ArrayList<>();
 
     public  ReadFile() {
 
@@ -27,9 +21,8 @@ public class ReadFile {
         //https://www.reddit.com/r/learnprogramming/comments/at2s9u/hard_time_figuring_out_how_to_split_my_text_file/
         try {
             System.out.println("inTry");
-            File findFile = new File("./paymentInfo.txt");
-            //File findFile = new File("./procpects.txt");
-            String forbidden="";
+            //File findFile = new File("./paymentInfo.txt");
+            File findFile = new File("./procpects.txt");
             if (findFile.exists()) {
                 Scanner readFile = new Scanner(findFile);
                 List<String> allInfo = new ArrayList<String>();
@@ -47,19 +40,24 @@ public class ReadFile {
 
                 System.out.println(fileData[allInfo.size() - 1]);
 
-                for(int i=0; i<(allInfo.size()-1); i++){
+                for(int i=0; i<(allInfo.size()); i++){
                     System.out.println(i);
-                    String [] split =fileData[i].split(Pattern.quote(","));
-                    name.add(split[0]);
-                    loan.add(Float.parseFloat(split[1]));
-                    interest.add(Float.parseFloat(split[2]));
-                    year.add(Float.parseFloat(split[3]));
-                    System.out.println("fileDataFor: "+fileData[i]);
-                    //String toFloat=(split[1]);
-                    //String toFloat=(split[1]);
+                    if ((!fileData[i].matches("[^\"]*"))){
+                        System.out.println("Forbidden character in the: "+(i+1)+"th input. Check for \"");
+                    }else{
+                        if(!fileData[i].matches("[^,]+")) {
+                            String[] split = fileData[i].split(Pattern.quote(","));
+                            name.add(split[0]);
+                            loan.add(Float.parseFloat(split[1]));
+                            interest.add(Float.parseFloat(split[2]));
+                            year.add(Float.parseFloat(split[3]));
+                            System.out.println("fileDataFor: " + fileData[i]);
+                        }else {
+                            System.out.println("Eroor occured. Make sure that columns are separated with , ");
+                        }
+                    }
 
-                   // interest.add(split[2]);
-                    //interest.add(Float.parseFloat(split[1]));
+
 
                 }
                 String[] nameData = name.toArray(new String[0]);
@@ -83,34 +81,5 @@ public class ReadFile {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
-
-           /*     while (readFile.hasNextLine()) {
-
-                    fileData+=readFile.nextLine()+"|";
-                }
-
-        //System.out.println(fileData);
-        String originalData = fileData;
-        String [] splitData= originalData.split(Pattern.quote("|"));
-
-        //Getting the name and then separating name: and the customer name
-        String [] nameSplit= splitData[0].split(Pattern.quote(": "));
-        name= nameSplit[1];
-
-        //getting the intrest
-        String [] bSplit = splitData[1].split(Pattern.quote(": "));
-        String [] bSplitTwo= bSplit[1].split(Pattern.quote("%"));
-        b = Float.parseFloat(bSplitTwo[0]);
-
-        String [] loanSplit = splitData[2].split(Pattern.quote(": "));
-        String [] loanSplitTwo = loanSplit[1].split(Pattern.quote("€"));
-        u = Float.parseFloat(loanSplitTwo[0]);
-
-        String [] yearSplit= splitData[3].split(Pattern.quote(": "));
-        y = Float.parseFloat(yearSplit[1]);
-
-        new CalculateTheMortage().CalculateTheMortage(b,u,y,name);
-*/
     }
 }
