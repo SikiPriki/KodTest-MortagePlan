@@ -8,7 +8,7 @@ The code is adjusted to the procpects.txt file. In the text file one can see tha
 After getting the needed information the values are sent over to CalculateTheMortage to calculate the monthly pill. And there it prints it also out.
 
 Lastly, after doing the calculations, the code makes a text file where one can see the results. 
-<b>OBS!</b> The code can crash if the file exists. In that case, please do run the code again and then it should run smoothly once again.
+<b>OBS! The code can crash if the file exists. In that case, please do run the code again and then it should run smoothly once again.</b>
 
 ## Unit Test
 For unit test I used JUnit. This will check that the math in public float e works.
