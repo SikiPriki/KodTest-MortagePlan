@@ -16,11 +16,8 @@ public class ReadFile {
         List<Float> interest = new ArrayList<Float>();
         List<Float> loan = new ArrayList<Float>();
         List<Float> year = new ArrayList<Float>();
-        System.out.println("Yellow1");
-
 
         try {
-            System.out.println("inTry");
             //File findFile = new File("./paymentInfo.txt");
             File findFile = new File("./procpects.txt");
             if (findFile.exists()) {
@@ -54,27 +51,17 @@ public class ReadFile {
                             System.out.println("Eroor occured. Make sure that columns are separated with , ");
                         }
                     }
-
-
-
                 }
                 String[] nameData = name.toArray(new String[0]);
                 Float [] loanData=loan.toArray(new Float[0]);
                 Float [] interestData=interest.toArray(new Float[0]);
                 Float [] yearData=year.toArray(new Float[0]);
 
-                //To test
-                System.out.println(nameData[2]);
-
-
                 readFile.close();
                 new CalculateTheMortage().CalculateTheMortage(interestData,loanData,yearData,nameData);
             } else {
                 System.out.println("The file does not exist.");
             }
-
-            System.out.println("Em");
-
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
