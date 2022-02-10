@@ -23,9 +23,10 @@ class CalculateTheMortage {
             System.out.println("pow+" + pPower);
             //  e = (u[i] * ((bDecimal) * pPower) / (pPower - 1));
             //  this.e(u[i],bDecimal,pPower);
+            float answer=e(u[i],bDecimal,pPower);
 
             System.out.println("****************************************************************************************************\n" +
-                    "Prospect " + (i + 1) + ": " + name[i] + " wants to borrow " + u[i] + "€ for a period of " + y[i] + " years and pay " + e(u[i],bDecimal,pPower)+ "€ each month.");
+                    "Prospect " + (i + 1) + ": " + name[i] + " wants to borrow " + u[i] + "€ for a period of " + y[i] + " years and pay " + answer+ "€ each month.");
 
         }
 

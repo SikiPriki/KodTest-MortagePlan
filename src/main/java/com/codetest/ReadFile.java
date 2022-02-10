@@ -18,7 +18,7 @@ public class ReadFile {
         List<Float> year = new ArrayList<Float>();
         System.out.println("Yellow1");
 
-        //https://www.reddit.com/r/learnprogramming/comments/at2s9u/hard_time_figuring_out_how_to_split_my_text_file/
+
         try {
             System.out.println("inTry");
             //File findFile = new File("./paymentInfo.txt");
@@ -37,8 +37,6 @@ public class ReadFile {
                 //Removing the: Customer,Total loan,Interest,Years from Array List
                 allInfo.remove(0);
                 String[] fileData = allInfo.toArray(new String[0]);
-
-                System.out.println(fileData[allInfo.size() - 1]);
 
                 for(int i=0; i<(allInfo.size()); i++){
                     System.out.println(i);
