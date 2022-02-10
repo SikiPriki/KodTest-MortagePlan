@@ -3,8 +3,8 @@
 Download/ clone this code.
 <b>This shows the steps in IntelliJ</b>
 - Firstly open the project
-- Go to "Add Configurations 
-  "<img width="320" alt="step1" src="https://user-images.githubusercontent.com/70576475/153418569-58038971-9914-4425-a694-486f53ce4d62.PNG">
+- Go to "Add Configurations" 
+- <img width="320" alt="step1" src="https://user-images.githubusercontent.com/70576475/153418569-58038971-9914-4425-a694-486f53ce4d62.PNG">
 - In there go on plus sign and choose "Application"
 - There same the Application, set Main class, set also Use classpath of module. It should look something like this: <img width="542" alt="step4top" src="https://user-images.githubusercontent.com/70576475/153419540-b14645fa-3ea4-4d9c-a114-6f6e247fc585.png"> <img width="542" alt="step4bottom" src="https://user-images.githubusercontent.com/70576475/153419566-8b60142d-300d-4fd8-a4a0-ebe002872e5c.png">
 - Then applay it and Run the code with the play button.
