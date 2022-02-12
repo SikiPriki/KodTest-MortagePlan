@@ -2,7 +2,7 @@
 ## How to start the code
 Download/ clone this code.
 <b>This shows the steps in IntelliJ</b>
-- Firstly open the project
+- Firstly open the project and wait for Gradle to finish downloading.
 - Go to "Add Configurations" 
 - <img width="320" alt="step1" src="https://user-images.githubusercontent.com/70576475/153418569-58038971-9914-4425-a694-486f53ce4d62.PNG">
 - In there go on plus sign and choose "Application"
