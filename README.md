@@ -21,6 +21,7 @@ After getting the needed information the values are sent over to CalculateTheMor
 
 Lastly, after doing the calculations, the code makes a text file where one can see the results. 
 <b>OBS! The code can crash if the file exists. In that case, please do run the code again and then it should run smoothly once again.</b>
+This code is also using Gradle.
 
 ## Unit Test
 For unit test I used JUnit. This will check that the math in public float e works.
